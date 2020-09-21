@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            button {
+                width: 100px;
+                height: 80px;
+                border: 2px solid rgb(20, 219, 153);
+                border-radius: 10px;
+                background-color: #fff;
+                margin-right: 50px;
+                position: relative;
+                overflow: hidden;
+            }
+            .pink {
+                border: 2px solid pink;
+            }
+            .pink .button-text {
+                color: pink;
+            }
+            .blue {
+                border: 2px solid cornflowerblue;
+            }
+            .blue .button-text {
+                color: cornflowerblue;
+            }
+            .button-text {
+                color: rgb(20, 219, 153);
+                position: relative;
+                z-index: 2;
+                transition: 0.3s;
+            }
+            button::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(20, 219, 153);
+                /* transform-origin: 50% 0; */
+                transform: translateX(-100%);
+                transition: all 0.3s;
+                z-index: 1;
+            }
+            .pink::after {
+                background-color: pink;
+                transform: scale(0, 1);
+            }
+            .blue::after {
+                background-color: cornflowerblue;
+                transform: translateY(100%);
+            }
+            button:hover::after {
+                transform: scale(1, 1);
+            }
+            button:hover .button-text {
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <button>
+                <h1 class="button-text">click</h1>
+            </button>
+            <button class="pink">
+                <h1 class="button-text">click</h1>
+            </button>
+            <button class="blue">
+                <h1 class="button-text">click</h1>
+            </button>
+        </div>
+    </body>
+</html>

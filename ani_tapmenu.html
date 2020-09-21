@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                user-select: none; /*드래그, 텍스트 선택 안됨*/
+            }
+            body {
+                height: 100vh;
+                background-color: tomato;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .tabs {
+                display: flex;
+                background-color: #fff;
+                position: relative;
+                width: 270px;
+                height: 70px;
+                overflow: hidden;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            }
+            .tabs .tab {
+                width: 90px;
+                height: 100%;
+                text-align: center;
+                margin-top: 10px;
+                z-index: 2;
+                cursor: pointer;
+            }
+            p {
+                color: #000;
+            }
+            .tabs .border {
+                position: absolute;
+                width: 90px;
+                height: 5px;
+                background-color: rgb(247, 244, 68);
+                bottom: 0;
+                z-index: 2;
+                transition: 0.4s;
+            }
+            .tabs .background {
+                position: absolute;
+                width: 90px;
+                height: 100%;
+                background-color: rgb(255, 185, 81);
+                z-index: 1;
+                bottom: 0;
+                transition: 0.4s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="tabs">
+            <label class="tab tab01" onclick="tab01();">
+                <p>menu1</p>
+            </label>
+            <label class="tab tab02" onclick="tab02();">
+                <p>menu2</p>
+            </label>
+            <label class="tab tab03" onclick="tab03();">
+                <p>menu3</p>
+            </label>
+
+            <span class="border"></span>
+            <span class="background"></span>
+        </div>
+
+        <script>
+            let border = document.querySelector('.tabs .border');
+            let background = document.querySelector('.tabs .background');
+
+            function tab01() {
+                border.style.transform = 'translateX(0)';
+                background.style.transform = 'translateX(0)';
+            }
+            function tab02() {
+                border.style.transform = 'translateX(90px)';
+                background.style.transform = 'translateX(90px)';
+            }
+            function tab03() {
+                border.style.transform = 'translateX(180px)';
+                background.style.transform = 'translateX(180px)';
+            }
+        </script>
+    </body>
+</html>
