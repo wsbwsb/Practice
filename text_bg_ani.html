@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+        <style>
+            body {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #000;
+            }
+            h1 {
+                color: #fff;
+                font-size: 6rem;
+                letter-spacing: 2px;
+                font-family: 'Roboto', sans-serif;
+                background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYvwBHY_qE-vS1wVre7bC97sFT5qQCc-VG2g&usqp=CAU');
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: animate 7s linear infinite;
+            }
+            @keyframes animate {
+                from {
+                    background-position: 0% 50%;
+                }
+                to {
+                    background-position: 100% 50%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>TEXT ANIMATION</h1>
+    </body>
+</html>

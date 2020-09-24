@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                /* list-style: none; */
+                text-decoration: none;
+            }
+            nav {
+                position: fixed;
+                left: 0;
+                top: 0;
+                background-color: #fff;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                width: 100%;
+            }
+            nav div {
+                width: 500px;
+                margin: 0 auto;
+                display: flex;
+                position: relative;
+            }
+            nav div a {
+                flex: 1;
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                color: #000;
+            }
+            nav div > .border {
+                position: absolute;
+                width: 100px;
+                height: 3px;
+                background-color: teal;
+                left: 0;
+                bottom: 0;
+                transition: 0.4s;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <div>
+                <a href="#" onclick="menu1();"><span>menu1</span></a>
+                <a href="#" onclick="menu2();"><span>menu2</span></a>
+                <a href="#" onclick="menu3();"><span>menu3</span></a>
+                <a href="#" onclick="menu4();"><span>menu4</span></a>
+                <a href="#" onclick="menu5();"><span>menu5</span></a>
+                <span class="border"></span>
+            </div>
+        </nav>
+        <script>
+            let border = document.querySelector('nav div .border');
+
+            function menu1() {
+                border.style.transform = 'translateX(0px)';
+            }
+            function menu2() {
+                border.style.transform = 'translateX(100px)';
+            }
+            function menu3() {
+                border.style.transform = 'translateX(200px)';
+            }
+            function menu4() {
+                border.style.transform = 'translateX(300px)';
+            }
+            function menu5() {
+                border.style.transform = 'translateX(400px)';
+            }
+        </script>
+    </body>
+</html>
