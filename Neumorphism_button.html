@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/def4536023.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>뉴모피즘 버튼</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                background-color: #ececec;
+            }
+            div {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            div > ul {
+                display: flex;
+            }
+            div > ul > li {
+                list-style: none;
+                cursor: pointer;
+                transition: color 0.2s ease-out;
+                transform: 0.2s ease-out;
+                color: #696969;
+                display: inline-block;
+                margin: 0 20px;
+                padding: 25px;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.1),
+                    -4px -4px 6px rgba(255, 255, 255, 0.7);
+                border-radius: 50%;
+            }
+            div > ul > li > i {
+                font-size: 40px;
+            }
+            div > ul > li:hover {
+                box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
+                    -4px -4px 10px rgba(255, 255, 255, 0.7);
+            }
+            div > ul > li:focus {
+                outline: none;
+                box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.1),
+                    -4px -4px 10px rgba(255, 255, 255, 0.7),
+                    4px 4px 10px 0 rgba(0, 0, 0, 0.1) inset,
+                    -4px -4px 10px rgba(255, 255, 255, 0.7) inset;
+            }
+            div > ul > li:hover,
+            div > ul > li:focus {
+                color: darkturquoise;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li tabindex="0"><i class="fa fa-home"></i></li>
+                <li tabindex="0"><i class="fa fa-heart"></i></li>
+                <li tabindex="0"><i class="fa fa-leaf"></i></li>
+                <li tabindex="0"><i class="fa fa-send-o"></i></li>
+                <li tabindex="0"><i class="fa fa-camera"></i></li>
+            </ul>
+        </div>
+    </body>
+</html>
